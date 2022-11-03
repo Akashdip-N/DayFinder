@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".rate_us">
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginRight="20sp"
+        android:text="@string/rate_rate"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/reactions"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginBottom="0sp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/satisfied"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/very_satisfied" />
+
+        <ImageButton
+            android:id="@+id/happy"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/happy" />
+
+        <ImageButton
+            android:id="@+id/neutral"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/neutral" />
+
+        <ImageButton
+            android:id="@+id/sad"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/dissatisfied" />
+
+        <ImageButton
+            android:id="@+id/dissatisfied"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/very_dis_happy" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:text="@string/thanks"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/easter_egg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250sp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/copyright"
+        android:textColor="@color/copyright"
+        android:textSize="30sp" />
+
+</LinearLayout>

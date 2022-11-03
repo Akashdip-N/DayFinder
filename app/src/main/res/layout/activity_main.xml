@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8CD0B2"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="casual"
+        android:text="@string/instructions"
+        android:textColor="@color/text_colour"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Input"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="@string/date"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:paddingBottom="20dp"
+        android:textColorHint="@color/text_colour"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/Button"
+        android:fontFamily="casual"
+        android:hint="@string/submit"
+        android:textColorHint="@color/text_colour"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/Output"
+        android:fontFamily="casual"
+        android:textColor="@color/text_colour"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/tryagain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:background="@color/Try_again"
+        android:text="@string/tryagain"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:background="@color/rate_it"
+        android:text="@string/rate"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:background="@color/Contact_us"
+        android:text="@string/contact_us"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="@string/copyright"
+        android:textColor="@color/copyright"
+        android:textSize="24sp" />
+
+</LinearLayout>
