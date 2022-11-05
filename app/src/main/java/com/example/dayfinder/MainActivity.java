@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         rate.setVisibility(GONE);
         tryagain.setVisibility(GONE);
         submit.setOnClickListener(new OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 int day = 0, month = 0, year = 0;
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity
                                         ++da;
                                         if( i == y && j == m && k == d )
                                         {
-                                            result.setText(" The entered date is: " + d + "/" + m + "/" + y + " \n And the respective day is: " + d1);
+                                            result.setText("Date : " + d + "/" + m + "/" + y + "\nDay: " + d1);
                                             result.setVisibility(VISIBLE);
                                             submit.setVisibility(GONE);
                                             rate.setVisibility(VISIBLE);

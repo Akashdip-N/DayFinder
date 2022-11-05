@@ -21,11 +21,11 @@ public class all_activity_code extends AppCompatActivity {
 
         code = findViewById(R.id.code);
         contact = findViewById(R.id.contact_us);
-        layout_code = findViewById(R.id.Layoutcode);
+        layout_code = findViewById(R.id.layout_code);
         login = findViewById(R.id.Login);
         MainActivity = findViewById(R.id.MainActivity);
         rate_us = findViewById(R.id.rate_us);
-        codeViewer = findViewById(R.id.layout_code);
+        codeViewer = findViewById(R.id.codeviewer);
         repeat = findViewById(R.id.repeat);
         instruction = findViewById(R.id.instructions);
 

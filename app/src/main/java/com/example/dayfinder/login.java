@@ -1,5 +1,7 @@
 package com.example.dayfinder;
 
+import static android.view.View.GONE;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class login extends AppCompatActivity {
     private EditText ID;
     private Button submit;
-    TextView show;
+    TextView show, instructions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class login extends AppCompatActivity {
         ID = findViewById(R.id.login);
         submit = findViewById(R.id.btnlogin);
         show = findViewById(R.id.show);
+        instructions = findViewById(R.id.instructions_login);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +48,9 @@ public class login extends AppCompatActivity {
                 }
                 else
                 {
+
                     show.setText("PLEASE CONTACT THE DEVELOPER TO ACCESS THIS FILE!!!");
+                    submit.setVisibility(GONE);
                 }
             }
         });
