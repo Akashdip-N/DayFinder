@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
-        android:background="@color/Try_again"
+
         android:text="@string/tryagain"
         android:textSize="20sp" />
 
@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
-        android:background="@color/rate_it"
+
         android:text="@string/rate"
         android:textSize="24sp" />
 
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
-        android:background="@color/Contact_us"
+
         android:text="@string/contact_us"
         android:textSize="30sp" />
 
