@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8CD0B2</color>  <!-- this is the background colour FF693F72-->
+    <color name="colorPrimary">#FFFFFF</color>  <!-- this is the background colour FF693F72-->
     <color name="Input">#D9A1DC</color>
     <color name="Button">#8B0F5AD2</color>
     <color name="Output">#799595</color>
