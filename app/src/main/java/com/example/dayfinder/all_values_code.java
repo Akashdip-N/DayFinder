@@ -1,5 +1,6 @@
 package com.example.dayfinder;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class all_values_code extends AppCompatActivity {
         instruction = findViewById(R.id.instructions);
 
         colors.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 codeviewer.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
