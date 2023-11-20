@@ -57,6 +57,7 @@ public class all_values_code extends AppCompatActivity {
 
         strings.setOnClickListener(new View.OnClickListener() {
             @Override
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
                 codeviewer.setText("<resources>\n" +
                         "    <string name=\"app_name\">Day Finder</string>\n" +
@@ -109,6 +110,7 @@ public class all_values_code extends AppCompatActivity {
 
         styles.setOnClickListener(new View.OnClickListener() {
             @Override
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
                 codeviewer.setText("<resources>\n" +
                         "\n" +
