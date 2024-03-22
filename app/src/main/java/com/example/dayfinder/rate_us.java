@@ -32,63 +32,53 @@ public class rate_us extends AppCompatActivity {
 
         ester_egg.setOnClickListener(v -> {
             Intent intent = new Intent(rate_us.this, login.class);
-            Toast.makeText(rate_us.this, "Wooow nice you have found out the easter egg from this app.... ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(
+                    rate_us.this, "Wooow nice you have found out the easter egg from this app.... ",
+                    Toast.LENGTH_SHORT
+            ).show();
             startActivity(intent);
         });
 
         satisfied.setOnClickListener(v -> {
-            Toast.makeText(rate_us.this, "It seems that you are very much satisfied with the app's performance ☺️.", Toast.LENGTH_SHORT).show();
-
-            satisfied.setVisibility(View.GONE);
-            happy.setVisibility(View.GONE);
-            neutral.setVisibility(View.GONE);
-            sad.setVisibility(View.GONE);
-            dissatisfied.setVisibility(View.GONE);
-            thanks.setVisibility(View.VISIBLE);
+            Toast.makeText(
+                    rate_us.this, "It seems that you are very much satisfied with the app's performance ☺️.",
+                    Toast.LENGTH_SHORT
+            ).show();
         });
 
         happy.setOnClickListener(v -> {
-            Toast.makeText(rate_us.this, "It seems that we have to work on this app's performance \uD83D\uDE42 ", Toast.LENGTH_SHORT).show();
-
-            satisfied.setVisibility(View.GONE);
-            happy.setVisibility(View.GONE);
-            neutral.setVisibility(View.GONE);
-            sad.setVisibility(View.GONE);
-            dissatisfied.setVisibility(View.GONE);
-            thanks.setVisibility(View.VISIBLE);
+            Toast.makeText(
+                    rate_us.this, "It seems that we have to work on this app's performance \uD83D\uDE42 ",
+                    Toast.LENGTH_SHORT
+            ).show();
         });
 
         neutral.setOnClickListener(v -> {
-            Toast.makeText(rate_us.this, "It seems that you are ok with the app's performance.", Toast.LENGTH_SHORT).show();
-
-            satisfied.setVisibility(View.GONE);
-            happy.setVisibility(View.GONE);
-            neutral.setVisibility(View.GONE);
-            sad.setVisibility(View.GONE);
-            dissatisfied.setVisibility(View.GONE);
-            thanks.setVisibility(View.VISIBLE);
+            Toast.makeText(
+                    rate_us.this, "It seems that you are ok with the app's performance.",
+                    Toast.LENGTH_SHORT
+            ).show();
         });
 
         sad.setOnClickListener(v -> {
-            Toast.makeText(rate_us.this, "It seems that you are not happy with the app's performance  \uD83D\uDE1F ", Toast.LENGTH_SHORT).show();
-
-            satisfied.setVisibility(View.GONE);
-            happy.setVisibility(View.GONE);
-            neutral.setVisibility(View.GONE);
-            sad.setVisibility(View.GONE);
-            dissatisfied.setVisibility(View.GONE);
-            thanks.setVisibility(View.VISIBLE);
+            Toast.makeText(
+                    rate_us.this, "It seems that you are not happy with the app's performance  \uD83D\uDE1F ",
+                    Toast.LENGTH_SHORT
+            ).show();
         });
 
         dissatisfied.setOnClickListener(v -> {
-            Toast.makeText(rate_us.this, "We are very sorry for this terrible experience \uD83D\uDE1E", Toast.LENGTH_SHORT).show();
-
-            satisfied.setVisibility(View.GONE);
-            happy.setVisibility(View.GONE);
-            neutral.setVisibility(View.GONE);
-            sad.setVisibility(View.GONE);
-            dissatisfied.setVisibility(View.GONE);
-            thanks.setVisibility(View.VISIBLE);
+            Toast.makeText(
+                    rate_us.this, "We are very sorry for this terrible experience \uD83D\uDE1E",
+                    Toast.LENGTH_SHORT
+            ).show();
         });
+
+        satisfied.setVisibility(View.GONE);
+        happy.setVisibility(View.GONE);
+        neutral.setVisibility(View.GONE);
+        sad.setVisibility(View.GONE);
+        dissatisfied.setVisibility(View.GONE);
+        thanks.setVisibility(View.VISIBLE);
     }
 }
