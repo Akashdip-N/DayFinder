@@ -1,0 +1,1 @@
+# This is a self created project n which, using this android application you will be able to get to see the day of that specific entered date, within the yeat limit of 1800 to 3000
