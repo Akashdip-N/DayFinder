@@ -28,30 +28,17 @@ public class login extends AppCompatActivity {
         show = findViewById(R.id.show);
         instructions = findViewById(R.id.instructions_login);
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        submit.setOnClickListener(v -> {
+            String login_ID;
+            login_ID = ID.getText().toString().trim();
 
-                String login_ID;
-                login_ID = ID.getText().toString().trim();
-
-                if( login_ID.equals("dayfinder@code") ) {
-                    Intent intent = new Intent(login.this, code.class);
-                    startActivity(intent);
-                }
-                else
-                if( login_ID.equals("NB") )
-                {
-                    Toast.makeText(login.this, " WELCOME MY LOVE ❤", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(login.this, code.class);
-                    startActivity(intent);
-                }
-                else
-                {
-
-                    show.setText("PLEASE CONTACT THE DEVELOPER TO ACCESS THIS FILE!!!");
-                    submit.setVisibility(GONE);
-                }
+            if( login_ID.equals("dayfinder@code") ) {
+                Intent intent = new Intent(login.this, code.class);
+                startActivity(intent);
+            }
+            else {
+                show.setText(R.string.contact_dev);
+                submit.setVisibility(GONE);
             }
         });
     }

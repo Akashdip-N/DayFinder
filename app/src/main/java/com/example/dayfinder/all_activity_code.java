@@ -1292,11 +1292,6 @@ public class all_activity_code extends AppCompatActivity {
         });
 
 
-        repeat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                recreate();
-            }
-        });
+        repeat.setOnClickListener(v -> recreate());
     }
 }

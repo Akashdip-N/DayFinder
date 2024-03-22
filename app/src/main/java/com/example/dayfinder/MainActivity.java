@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity
     TextView copyright, result, instructions;
     Button tryagain, contact, rate, submit ;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Input = findViewById(R.id.Input);
@@ -47,47 +46,45 @@ public class MainActivity extends AppCompatActivity
                 String input = Input.getText().toString().trim();
                 if(input.isEmpty())
                     Toast.makeText(MainActivity.this, " Please enter some values to continue. ", LENGTH_SHORT).show();
-                else
-                {
+                else {
                     int date;
                     {
-                        if (Input.getText().charAt(2) == '/' )
-                        {
-                            date = Integer.parseInt(Character.toString(input.charAt(0)));
-                            day = date*10;
-                            date = Integer.parseInt(Character.toString(input.charAt(1)));
-                            day += date;
-                            date = Integer.parseInt(Character.toString(input.charAt(3)));
+                        int date1 = Integer.parseInt(Character.toString(input.charAt(0)));
+                        int date2 = Integer.parseInt(Character.toString(input.charAt(1)));
+                        date = date1;
+                        day = date*10;
+                        date = date2;
+                        day += date;
+                        int date3 = Integer.parseInt(Character.toString(input.charAt(3)));
+                        int date4 = Integer.parseInt(Character.toString(input.charAt(4)));
+                        int date5 = Integer.parseInt(Character.toString(input.charAt(7)));
+                        if (Input.getText().charAt(2) == '/' ) {
+                            date = date3;
                             month = date*10;
-                            date = Integer.parseInt(Character.toString(input.charAt(4)));
+                            date = date4;
                             month += date;
-                            date = Integer.parseInt(Character.toString(input.charAt(6)));
+                            date = Integer.parseInt("" + input.charAt(6));
                             year = date * 1000;
-                            date = Integer.parseInt(Character.toString(input.charAt(7)));
+                            date = date5;
                             year += date * 100;
                             date = Integer.parseInt(Character.toString(input.charAt(8)));
                             year += date * 10;
                             date = Integer.parseInt(Character.toString(input.charAt(9)));
-                            year += date;
                         }
                         else {
-                            date = Integer.parseInt(Character.toString(input.charAt(0)));
-                            day = date * 10;
-                            date = Integer.parseInt(Character.toString(input.charAt(1)));
-                            day += date;
                             date = Integer.parseInt(Character.toString(input.charAt(2)));
                             month = date * 10;
-                            date = Integer.parseInt(Character.toString(input.charAt(3)));
+                            date = date3;
                             month += date;
-                            date = Integer.parseInt(Character.toString(input.charAt(4)));
+                            date = date4;
                             year = date * 1000;
                             date = Integer.parseInt(Character.toString(input.charAt(5)));
                             year += date * 100;
                             date = Integer.parseInt(Character.toString(input.charAt(6)));
                             year += date * 10;
-                            date = Integer.parseInt(Character.toString(input.charAt(7)));
-                            year += date;
+                            date = date5;
                         }
+                        year += date;
                     }
                     {
                         int da, l = 0, d = day, m  = month ,  y = year ;
@@ -108,13 +105,12 @@ public class MainActivity extends AppCompatActivity
                                 tryagain.setVisibility(VISIBLE);
                             }
                         }
-                        for( int i = 1800; i <= 3000; i++ )
-                        {
+                        for( int i = 1800; i <= 3000; i++ ) {
                             if( ( i % 4 == 0 && i % 100 != 0 ) || ( i % 4 == 0 && i % 100 == 0 && i % 400 == 0 ) )
                                     ++l;
-                                else
-                                {
+                                else {
                                     l = 0;
+                                    // Exception handling if the user types Feb as well as it's not a leap year
                                     if( d == 29 && l == 1 ) {
                                         result.setText("You entered a wrong date please start the app once again...");
                                         instructions.setVisibility(GONE);
@@ -131,7 +127,7 @@ public class MainActivity extends AppCompatActivity
                                         d1 = "Wednesday";
                                     else
                                         if( da == 2 )
-                                        d1 = "Thursday";
+                                            d1 = "Thursday";
                                         else
                                             if( da == 3 )
                                                 d1 = "Friday";
@@ -150,8 +146,7 @@ public class MainActivity extends AppCompatActivity
                                             da = 0;
                                         }
                                         ++da;
-                                        if( i == y && j == m && k == d )
-                                        {
+                                        if( i == y && j == m && k == d ) {
                                             result.setText("Date : " + d + "/" + m + "/" + y + "\nDay: " + d1);
                                             result.setVisibility(VISIBLE);
                                             submit.setVisibility(GONE);
@@ -161,10 +156,12 @@ public class MainActivity extends AppCompatActivity
                                             instructions.setVisibility(GONE);
                                             contact.setVisibility(VISIBLE);
                                         }
+
                                         {
                                             if( ( j == 4 || j == 6 || j == 9 || j  == 11 ) && k == 30 )
                                                 break;
                                         }
+
                                         {
                                             if( k == 29 && j == 2 &&  l!= 0  )
                                                 break;
@@ -175,27 +172,16 @@ public class MainActivity extends AppCompatActivity
                                 }
                         }
                     }
-                    tryagain.setOnClickListener(new OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            recreate();
-                        }
+                    tryagain.setOnClickListener(v -> recreate());
+
+                    contact.setOnClickListener(v -> {
+                        Intent intent = new Intent(MainActivity.this, Contact_us.class);
+                        startActivity(intent);
                     });
 
-                    contact.setOnClickListener(new OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this, Contact_us.class);
-                            startActivity(intent);
-                        }
-                    });
-
-                    rate.setOnClickListener(new OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this, rate_us.class);
-                            startActivity(intent);
-                        }
+                    rate.setOnClickListener(v -> {
+                        Intent intent = new Intent(MainActivity.this, rate_us.class);
+                        startActivity(intent);
                     });
                 }
             }
