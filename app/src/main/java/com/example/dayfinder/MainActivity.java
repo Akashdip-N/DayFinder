@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity
                 String input = Input.getText().toString().trim();
                 if(input.isEmpty())
                     Toast.makeText(MainActivity.this, " Please enter some values to continue. ", LENGTH_SHORT).show();
-                else {
+                /*else
+                    if (input.charAt(0) == '\0' || input.charAt(1) == '\0' || input.charAt(3) == '\0' || input.charAt(4) == '\0' || input.charAt(6) == '\0' || input.charAt(7) == '\0' || input.charAt(8) == '\0' || input.charAt(9) == '\0')
+                        Toast.makeText(MainActivity.this, "Enter the input as required!!", LENGTH_SHORT).show();
+                */else {
                     int date;
                     {
                         int date1 = Integer.parseInt(Character.toString(input.charAt(0)));
@@ -87,14 +90,14 @@ public class MainActivity extends AppCompatActivity
                         year += date;
                     }
                     {
-                        int da, l = 0, d = day, m  = month ,  y = year ;
+                        int da, l = 0;
                         String d1 = "a";
                         da = 1;
                         {
-                            if((d > 29 && m == 2) || (d > 30 && m == 4) || (d > 30 && m == 6) || (d > 30 && m == 9) || (d > 30 && m == 11))
+                            if((day > 29 && month == 2) || (day > 30 && month == 4) || (day > 30 && month == 6) || (day > 30 && month == 9) || (day > 30 && month == 11))
                                 Toast.makeText(MainActivity.this, "Please enter a valid date!!", LENGTH_SHORT).show();
 
-                            if( ( d >= 1 && d <= 31 ) && ( m >= 1 && m <= 12 ) && ( y >= 1800 && y <= 3000 ) ){}
+                            if( ( day >= 1 && day <= 31 ) && ( month >= 1 && month <= 12 ) && ( year >= 1800 && year <= 3000 ) ){}
                             else
                             {
                                 result.setText("Sorry please enter the perfect year number OR the day number OR the month number...... and try again by restarting the app");
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity
                                 else {
                                     l = 0;
                                     // Exception handling if the user types Feb as well as it's not a leap year
-                                    if( d == 29 && l == 1 ) {
+                                    if( day == 29 && l == 1 ) {
                                         result.setText("You entered a wrong date please start the app once again...");
                                         instructions.setVisibility(GONE);
                                         Input.setVisibility(GONE);
@@ -146,8 +149,8 @@ public class MainActivity extends AppCompatActivity
                                             da = 0;
                                         }
                                         ++da;
-                                        if( i == y && j == m && k == d ) {
-                                            result.setText("Date : " + d + "/" + m + "/" + y + "\nDay: " + d1);
+                                        if( i == year && j == month && k == day ) {
+                                            result.setText("Date : " + day + "/" + month + "/" + year + "\nDay: " + d1);
                                             result.setVisibility(VISIBLE);
                                             submit.setVisibility(GONE);
                                             rate.setVisibility(VISIBLE);
