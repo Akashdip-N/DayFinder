@@ -42,14 +42,16 @@ public class MainActivity extends AppCompatActivity
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
+                // input = 08072002
+                //         01234567
                 int day = 0, month = 0, year = 0;
                 String input = Input.getText().toString().trim();
                 if(input.isEmpty())
                     Toast.makeText(MainActivity.this, " Please enter some values to continue. ", LENGTH_SHORT).show();
-                /*else
-                    if (input.charAt(0) == '\0' || input.charAt(1) == '\0' || input.charAt(3) == '\0' || input.charAt(4) == '\0' || input.charAt(6) == '\0' || input.charAt(7) == '\0' || input.charAt(8) == '\0' || input.charAt(9) == '\0')
+                else
+                    if (input.charAt(0) == '\0' || input.charAt(1) == '\0' || input.charAt(3) == '\0' || input.charAt(4) == '\0' || input.charAt(6) == '\0' || input.charAt(7) == '\0')
                         Toast.makeText(MainActivity.this, "Enter the input as required!!", LENGTH_SHORT).show();
-                */else {
+                else {
                     int date;
                     {
                         int date1 = Integer.parseInt(Character.toString(input.charAt(0)));
@@ -97,7 +99,9 @@ public class MainActivity extends AppCompatActivity
                             if((day > 29 && month == 2) || (day > 30 && month == 4) || (day > 30 && month == 6) || (day > 30 && month == 9) || (day > 30 && month == 11))
                                 Toast.makeText(MainActivity.this, "Please enter a valid date!!", LENGTH_SHORT).show();
 
-                            if( ( day >= 1 && day <= 31 ) && ( month >= 1 && month <= 12 ) && ( year >= 1800 && year <= 3000 ) ){}
+                            if( ( day >= 1 && day <= 31 ) && ( month >= 1 && month <= 12 ) && ( year >= 1800 && year <= 3000 ) ){
+                                Toast.makeText(MainActivity.this, "Here comes your day!!", LENGTH_SHORT).show();
+                            }
                             else
                             {
                                 result.setText("Sorry please enter the perfect year number OR the day number OR the month number...... and try again by restarting the app");
@@ -175,6 +179,8 @@ public class MainActivity extends AppCompatActivity
                                 }
                         }
                     }
+
+                    // Restarting the app
                     tryagain.setOnClickListener(v -> recreate());
 
                     contact.setOnClickListener(v -> {
