@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity
         submit.setOnClickListener(view -> {
             // input = 08072002
             //         01234567
-            int day = 0, month = 0, year = 0;
-
+            int day, month, year;
             String input = Input.getText().toString().trim();
             if(input.isEmpty())
                 Toast.makeText(MainActivity.this, " Please enter some values to continue. ", LENGTH_SHORT).show();
@@ -94,21 +93,23 @@ public class MainActivity extends AppCompatActivity
                     tryagain.setVisibility(VISIBLE);
                 }
 
-                for( int i = 1800; i <= 3000; i++ ) {
+                for(int i = 1800; i <= 3000; i++) {
                     if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0))
                         ++l;
-                    else {
+                    else
                         l = 0;
-                        // Exception handling if the user types Feb as well as it's not a leap year
-                        if (day == 29 && l == 1) {
-                            result.setText("You entered a wrong date please start the app once again...");
-                            instructions.setVisibility(GONE);
-                            Input.setVisibility(GONE);
-                            submit.setVisibility(GONE);
-                            result.setVisibility(VISIBLE);
-                            tryagain.setVisibility(VISIBLE);
-                        }
+
+                    // Exception handling if the user types Feb as well as it's not a leap year
+                    if (day == 29 && l == 1) {
+                        result.setText("This is not a leap year!! Please enter a valid date!!");
+                        instructions.setVisibility(GONE);
+                        Input.setVisibility(GONE);
+                        submit.setVisibility(GONE);
+                        result.setVisibility(VISIBLE);
+                        tryagain.setVisibility(VISIBLE);
+                        tryagain.setText("Click on this button to restart the app");
                     }
+
                     for( int j = 1; j <= 12; j++ )
                         for( int k = 1; k <= 31; k++ ) {
                             switch (da) {
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity
                                     break;
                             }
                             ++da;
-                            if( i == year && j == month && k == day ) {
+                            if(i == year && j == month && k == day) {
                                 result.setText("Date : " + day + "/" + month + "/" + year + "\nDay: " + d1);
                                 result.setVisibility(VISIBLE);
                                 submit.setVisibility(GONE);
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity
                                 instructions.setVisibility(GONE);
                                 contact.setVisibility(VISIBLE);
                             }
-                            if( ( j == 4 || j == 6 || j == 9 || j  == 11 ) && k == 30 )
+                            if((j == 4 || j == 6 || j == 9 || j  == 11) && k == 30)
                                 break;
                             if (j == 2){
                                 if(l != 0 && k == 29)
@@ -154,8 +155,8 @@ public class MainActivity extends AppCompatActivity
                                 else
                                     if( l == 0 && k == 28 )
                                         break;
-                                    }
                             }
+                        }
                     }
                 // Restarting the app
                 tryagain.setOnClickListener(v -> recreate());
