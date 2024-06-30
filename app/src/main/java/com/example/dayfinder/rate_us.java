@@ -18,17 +18,7 @@ public class rate_us extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate_us);
-
-        satisfied = findViewById(R.id.satisfied);
-        happy = findViewById(R.id.happy);
-        neutral = findViewById(R.id.neutral);
-        sad = findViewById(R.id.sad);
-        dissatisfied = findViewById(R.id.dissatisfied);
-        thanks = findViewById(R.id.thanks);
-        ester_egg = findViewById(R.id.easter_egg);
-
-        thanks.setVisibility(View.GONE);
-
+        show();
         ester_egg.setOnClickListener(v -> {
             Intent intent = new Intent(rate_us.this, login.class);
             Toast.makeText(
@@ -78,6 +68,23 @@ public class rate_us extends AppCompatActivity {
             ).show();
             hide();
         });
+    }
+
+    public void show(){
+        satisfied = findViewById(R.id.satisfied);
+        happy = findViewById(R.id.happy);
+        neutral = findViewById(R.id.neutral);
+        sad = findViewById(R.id.sad);
+        dissatisfied = findViewById(R.id.dissatisfied);
+        thanks = findViewById(R.id.thanks);
+        ester_egg = findViewById(R.id.easter_egg);
+
+        satisfied.setVisibility(View.VISIBLE);
+        happy.setVisibility(View.VISIBLE);
+        neutral.setVisibility(View.VISIBLE);
+        sad.setVisibility(View.VISIBLE);
+        dissatisfied.setVisibility(View.VISIBLE);
+        thanks.setVisibility(View.GONE);
     }
 
     public void hide(){
