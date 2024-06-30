@@ -39,4 +39,5 @@
     <string name="colors_xml">colors.xml</string>
     <string name="all_values_codes">All values codes</string>
     <string name="contact_dev">PLEASE CONTACT THE DEVELOPER TO ACCESS THIS FILE!!!</string>
+    <string name="drop_us_a_mail">Drop us a mail</string>
 </resources>
