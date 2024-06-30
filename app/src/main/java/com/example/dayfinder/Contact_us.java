@@ -6,25 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Contact_us extends AppCompatActivity {
 
     ImageButton facebook,twitter,ig, linkedin;
+    TextView name;
     Button mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
-
-        facebook = findViewById(R.id.facebook);
-        twitter = findViewById(R.id.twitter);
-        ig = findViewById(R.id.ig);
-        mail = findViewById(R.id.mail);
-        linkedin = findViewById(R.id.linkedin);
-
+        items();
         facebook.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Akashdip.N"));
             startActivity(intent);
@@ -51,5 +47,15 @@ public class Contact_us extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/akashdip-neogi/"));
             startActivity(intent);
         });
+    }
+
+    public void items(){
+        name = findViewById(R.id.Name);
+        facebook = findViewById(R.id.facebook);
+        twitter = findViewById(R.id.twitter);
+        ig = findViewById(R.id.ig);
+        mail = findViewById(R.id.mail);
+        linkedin = findViewById(R.id.linkedin);
+        name.setVisibility(View.VISIBLE);
     }
 }
