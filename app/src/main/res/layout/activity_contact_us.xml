@@ -24,12 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center|center_horizontal|center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:srcCompat="@drawable/image"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-56dp" />
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/image" />
 
     <TextView
         android:id="@+id/Contact"
@@ -54,58 +50,37 @@
             android:id="@+id/facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
-            app:srcCompat="@drawable/facebook"
-            tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="454dp" />
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/facebook" />
 
         <ImageButton
             android:id="@+id/ig"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
-            android:contentDescription="@string/All_code"
-            app:srcCompat="@drawable/ig"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="454dp" />
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ig" />
 
         <ImageButton
             android:id="@+id/twitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
-            app:srcCompat="@drawable/twitter"
-            tools:layout_editor_absoluteX="256dp"
-            tools:layout_editor_absoluteY="454dp" />
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/twitter" />
 
         <ImageButton
             android:id="@+id/linkedin"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="20sp"
-            android:layout_weight="1"
+            android:layout_gravity="center"
             app:srcCompat="@drawable/linkedin" />
-
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/mail"
-        android:layout_width="110sp"
-        android:layout_height="100sp"
-        android:layout_marginStart="150sp"
-        android:layout_marginTop="10sp"
-        android:background="@drawable/gmail"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/drop_us_a_mail"
-        android:textAlignment="gravity"
-        android:textSize="15sp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/email" />
 
     <TextView
         android:id="@+id/copyright"

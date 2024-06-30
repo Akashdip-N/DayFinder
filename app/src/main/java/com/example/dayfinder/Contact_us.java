@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -14,7 +13,7 @@ public class Contact_us extends AppCompatActivity {
 
     ImageButton facebook,twitter,ig, linkedin;
     TextView name;
-    Button mail;
+    ImageButton mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class Contact_us extends AppCompatActivity {
         });
 
         twitter.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/akashdip_neogi"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://x.com/akashdip_neogi"));
             startActivity(intent);
         });
 
