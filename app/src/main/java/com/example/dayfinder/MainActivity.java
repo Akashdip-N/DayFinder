@@ -81,20 +81,33 @@ public class MainActivity extends AppCompatActivity
                     }
                     year += date;
                 }
-                {
-                    int da, l = 0;
-                    String d1 = "a";
-                    da = 1;
-                    {
-                        if((day > 29 && month == 2) || (day > 30 && month == 4) || (day > 30 && month == 6) || (day > 30 && month == 9) || (day > 30 && month == 11))
-                            Toast.makeText(MainActivity.this, "Please enter a valid date!!", LENGTH_SHORT).show();
 
-                        if( ( day >= 1 && day <= 31 ) && ( month >= 1 && month <= 12 ) && ( year >= 1800 && year <= 3000 ) ){
-                            Toast.makeText(MainActivity.this, "Here comes your day!!", LENGTH_SHORT).show();
-                        }
-                        else
-                        {
-                            result.setText("Sorry please enter the perfect year number OR the day number OR the month number...... and try again by restarting the app");
+                int da, l = 0;
+                String d1 = "a";
+                da = 1;
+                if((day > 29 && month == 2) || (day > 30 && month == 4) || (day > 30 && month == 6) || (day > 30 && month == 9) || (day > 30 && month == 11))
+                    Toast.makeText(MainActivity.this, "Please enter a valid date!!", LENGTH_SHORT).show();
+                if( ( day >= 1 && day <= 31 ) && ( month >= 1 && month <= 12 ) && ( year >= 1800 && year <= 3000 ) )
+                    Toast.makeText(MainActivity.this, "Here comes your day!!", LENGTH_SHORT).show();
+                else {
+                    result.setText("Sorry please enter the perfect year number OR the day number OR the month number...... and try again by restarting the app");
+                    instructions.setVisibility(GONE);
+                    Input.setVisibility(GONE);
+                    submit.setVisibility(GONE);
+                    result.setVisibility(VISIBLE);
+                    tryagain.setVisibility(VISIBLE);
+                }
+
+                for( int i = 1800; i <= 3000; i++ ) {
+                    if (i % 4 == 0)
+                        if (i % 100 != 0)
+                            if (i % 400 == 0)
+                                ++l;
+                    else {
+                        l = 0;
+                        // Exception handling if the user types Feb as well as it's not a leap year
+                        if (day == 29 && l == 1) {
+                            result.setText("You entered a wrong date please start the app once again...");
                             instructions.setVisibility(GONE);
                             Input.setVisibility(GONE);
                             submit.setVisibility(GONE);
@@ -102,74 +115,54 @@ public class MainActivity extends AppCompatActivity
                             tryagain.setVisibility(VISIBLE);
                         }
                     }
-                    for( int i = 1800; i <= 3000; i++ ) {
-                        if( ( i % 4 == 0 && i % 100 != 0 ) || ( i % 4 == 0 && i % 100 == 0 && i % 400 == 0 ) )
-                                ++l;
-                            else {
-                                l = 0;
-                                // Exception handling if the user types Feb as well as it's not a leap year
-                                if( day == 29 && l == 1 ) {
-                                    result.setText("You entered a wrong date please start the app once again...");
-                                    instructions.setVisibility(GONE);
-                                    Input.setVisibility(GONE);
-                                    submit.setVisibility(GONE);
-                                    result.setVisibility(VISIBLE);
-                                    tryagain.setVisibility(VISIBLE);
-                                }
-                            }
-
-                        for( int j = 1; j <= 12; j++ )
-                            for( int k = 1; k <= 31; k++ ) {
-                                if( da == 1 )
+                    for( int j = 1; j <= 12; j++ )
+                        for( int k = 1; k <= 31; k++ ) {
+                            switch (da) {
+                                case 1:
                                     d1 = "Wednesday";
+                                    break;
+                                case 2:
+                                    d1 = "Thursday";
+                                    break;
+                                case 3:
+                                    d1 = "Friday";
+                                    break;
+                                case 4:
+                                    d1 = "Saturday";
+                                    break;
+                                case 5:
+                                    d1 = "Sunday";
+                                    break;
+                                case 6:
+                                    d1 = "Monday";
+                                    break;
+                                case 7:
+                                    d1 = "Tuesday";
+                                    da = 0;
+                                    break;
+                            }
+                            ++da;
+                            if( i == year && j == month && k == day ) {
+                                result.setText("Date : " + day + "/" + month + "/" + year + "\nDay: " + d1);
+                                result.setVisibility(VISIBLE);
+                                submit.setVisibility(GONE);
+                                rate.setVisibility(VISIBLE);
+                                Input.setVisibility(GONE);
+                                tryagain.setVisibility(VISIBLE);
+                                instructions.setVisibility(GONE);
+                                contact.setVisibility(VISIBLE);
+                            }
+                            if( ( j == 4 || j == 6 || j == 9 || j  == 11 ) && k == 30 )
+                                break;
+                            if (j == 2){
+                                if(l != 0 && k == 29)
+                                    break;
                                 else
-                                    if( da == 2 )
-                                        d1 = "Thursday";
-                                    else
-                                        if( da == 3 )
-                                            d1 = "Friday";
-                                    else
-                                        if( da == 4 )
-                                            d1 = "Saturday";
-                                    else
-                                        if( da == 5 )
-                                            d1 = "Sunday";
-                                    else
-                                        if( da == 6 )
-                                            d1 = "Monday";
-                                    else
-                                    if( da == 7 ) {
-                                        d1 = "Tuesday";
-                                        da = 0;
-                                    }
-                                    ++da;
-                                    if( i == year && j == month && k == day ) {
-                                        result.setText("Date : " + day + "/" + month + "/" + year + "\nDay: " + d1);
-                                        result.setVisibility(VISIBLE);
-                                        submit.setVisibility(GONE);
-                                        rate.setVisibility(VISIBLE);
-                                        Input.setVisibility(GONE);
-                                        tryagain.setVisibility(VISIBLE);
-                                        instructions.setVisibility(GONE);
-                                        contact.setVisibility(VISIBLE);
-                                    }
-
-                                    {
-                                        if( ( j == 4 || j == 6 || j == 9 || j  == 11 ) && k == 30 )
-                                            break;
-                                    }
-
-                                    {
-                                        if( k == 29 && j == 2 &&  l!= 0  )
-                                            break;
-                                        else
-                                            if( k == 28 && j == 2 && l == 0 )
-                                                break;
+                                    if( l == 0 && k == 28 )
+                                        break;
                                     }
                             }
                     }
-                }
-
                 // Restarting the app
                 tryagain.setOnClickListener(v -> recreate());
 
