@@ -99,10 +99,8 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 for( int i = 1800; i <= 3000; i++ ) {
-                    if (i % 4 == 0)
-                        if (i % 100 != 0)
-                            if (i % 400 == 0)
-                                ++l;
+                    if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0))
+                        ++l;
                     else {
                         l = 0;
                         // Exception handling if the user types Feb as well as it's not a leap year
