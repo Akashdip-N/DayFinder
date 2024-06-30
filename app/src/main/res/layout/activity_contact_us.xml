@@ -26,7 +26,7 @@
         android:layout_height="258dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="5sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginEnd="20sp"
         app:srcCompat="@drawable/image"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-56dp" />
