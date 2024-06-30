@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
     EditText Input;
     TextView copyright, result, instructions;
     Button tryagain, contact, rate, submit ;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
