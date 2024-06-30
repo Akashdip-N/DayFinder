@@ -3,7 +3,6 @@ package com.example.dayfinder;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,16 +40,18 @@ public class rate_us extends AppCompatActivity {
 
         satisfied.setOnClickListener(v -> {
             Toast.makeText(
-                    rate_us.this, "It seems that you are very much satisfied with the app's performance ☺️.",
-                    Toast.LENGTH_SHORT
+                rate_us.this, "It seems that you are very much satisfied with the app's performance ☺️.",
+                Toast.LENGTH_SHORT
             ).show();
+            hide();
         });
 
         happy.setOnClickListener(v -> {
             Toast.makeText(
-                    rate_us.this, "It seems that we have to work on this app's performance \uD83D\uDE42 ",
-                    Toast.LENGTH_SHORT
+                rate_us.this, "It seems that we have to work on this app's performance \uD83D\uDE42 ",
+                Toast.LENGTH_SHORT
             ).show();
+            hide();
         });
 
         neutral.setOnClickListener(v -> {
@@ -58,22 +59,28 @@ public class rate_us extends AppCompatActivity {
                     rate_us.this, "It seems that you are ok with the app's performance.",
                     Toast.LENGTH_SHORT
             ).show();
+            hide();
         });
 
-        sad.setOnClickListener(v -> {
+
+        sad.setOnClickListener(view -> {
             Toast.makeText(
                     rate_us.this, "It seems that you are not happy with the app's performance  \uD83D\uDE1F ",
                     Toast.LENGTH_SHORT
             ).show();
+            hide();
         });
 
         dissatisfied.setOnClickListener(v -> {
             Toast.makeText(
-                    rate_us.this, "We are very sorry for this terrible experience \uD83D\uDE1E",
-                    Toast.LENGTH_SHORT
+                rate_us.this, "We are very sorry for this terrible experience \uD83D\uDE1E",
+                Toast.LENGTH_SHORT
             ).show();
+            hide();
         });
+    }
 
+    public void hide(){
         satisfied.setVisibility(View.GONE);
         happy.setVisibility(View.GONE);
         neutral.setVisibility(View.GONE);

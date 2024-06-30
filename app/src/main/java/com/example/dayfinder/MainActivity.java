@@ -48,17 +48,6 @@ public class MainActivity extends AppCompatActivity
                 //         01234567
                 int day = 0, month = 0, year = 0;
 
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                }
-
-                try {
-                    if (Input.getText().charAt(2) != '/' && Input.getText().charAt(5) != '/')
-                        Toast.makeText(MainActivity.this, "Please enter the date in the format dd/mm/yyyy", LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Please enter the date in the format dd/mm/yyyy", LENGTH_SHORT).show();
-                }
-
                 String input = Input.getText().toString().trim();
                 if(input.isEmpty())
                     Toast.makeText(MainActivity.this, " Please enter some values to continue. ", LENGTH_SHORT).show();
