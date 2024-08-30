@@ -22,7 +22,8 @@ public class rate_us extends AppCompatActivity {
         ester_egg.setOnClickListener(v -> {
             Intent intent = new Intent(rate_us.this, login.class);
             Toast.makeText(
-                    rate_us.this, "Wooow nice you have found out the easter egg from this app.... ",
+                    rate_us.this,
+                    "Wooow nice you have found out the easter egg from this app.... ",
                     Toast.LENGTH_SHORT
             ).show();
             startActivity(intent);
@@ -30,15 +31,17 @@ public class rate_us extends AppCompatActivity {
 
         satisfied.setOnClickListener(v -> {
             Toast.makeText(
-                rate_us.this, "It seems that you are very much satisfied with the app's performance ☺️.",
-                Toast.LENGTH_SHORT
+                    rate_us.this,
+                    "It seems that you are very much satisfied with the app's performance ☺️.",
+                    Toast.LENGTH_SHORT
             ).show();
             hide();
         });
 
         happy.setOnClickListener(v -> {
             Toast.makeText(
-                rate_us.this, "It seems that we have to work on this app's performance \uD83D\uDE42 ",
+                    rate_us.this,
+                    "It seems that we have to work on this app's performance \uD83D\uDE42 ",
                 Toast.LENGTH_SHORT
             ).show();
             hide();
@@ -46,7 +49,8 @@ public class rate_us extends AppCompatActivity {
 
         neutral.setOnClickListener(v -> {
             Toast.makeText(
-                    rate_us.this, "It seems that you are ok with the app's performance.",
+                    rate_us.this,
+                    "It seems that you are ok with the app's performance.",
                     Toast.LENGTH_SHORT
             ).show();
             hide();
@@ -55,7 +59,8 @@ public class rate_us extends AppCompatActivity {
 
         sad.setOnClickListener(view -> {
             Toast.makeText(
-                    rate_us.this, "It seems that you are not happy with the app's performance  \uD83D\uDE1F ",
+                    rate_us.this,
+                    "It seems that you are not happy with the app's performance  \uD83D\uDE1F ",
                     Toast.LENGTH_SHORT
             ).show();
             hide();
@@ -63,7 +68,8 @@ public class rate_us extends AppCompatActivity {
 
         dissatisfied.setOnClickListener(v -> {
             Toast.makeText(
-                rate_us.this, "We are very sorry for this terrible experience \uD83D\uDE1E",
+                    rate_us.this,
+                    "We are very sorry for this terrible experience \uD83D\uDE1E",
                 Toast.LENGTH_SHORT
             ).show();
             hide();
