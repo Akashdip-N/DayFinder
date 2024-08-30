@@ -2,9 +2,7 @@
 This is a self created android application which is designed to determine the day of the week for any given date within the extensive range of years from 1800 to 3000.
 
 # Requirements
-To run this code you need to have the following installed on your computer:
-  * [Java Programming Language](https://www.java.com/en/download/)
-  * [Android Studio](https://developer.android.com/studio)
+To run this application you need to have the [Android Studio](https://developer.android.com/studio) installed on your computer.
 
 
 # How to run this application
