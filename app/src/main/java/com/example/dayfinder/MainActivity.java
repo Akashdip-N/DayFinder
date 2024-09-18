@@ -1,7 +1,6 @@
 package com.example.dayfinder;
 
 import static android.view.View.GONE;
-import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
 import static android.widget.Toast.LENGTH_SHORT;
 
