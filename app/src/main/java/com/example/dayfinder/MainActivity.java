@@ -106,30 +106,23 @@ public class MainActivity extends AppCompatActivity
                     }
                     for( int j = 1; j <= 12; j++ )
                         for( int k = 1; k <= 31; k++ ) {
-                            switch (da){
-                                case 1:
-                                    d1 = "Wednesday";
-                                    break;
-                                case 2:
+                            if(da == 1)
+                                d1 = "Wednesday";
+                            else if(da == 2)
                                     d1 = "Thursday";
-                                    break;
-                                case 3:
-                                    d1 = "Friday";
-                                    break;
-                                case 4:
-                                    d1 = "Saturday";
-                                    break;
-                                case 5:
-                                    d1 = "Sunday";
-                                    break;
-                                case 6:
-                                    d1 = "Monday";
-                                    break;
-                                case 7:
-                                    d1 = "Tuesday";
-                                    da = 0;
-                                    break;
+                            else if(da == 3)
+                                d1 = "Friday";
+                            else if(da == 4)
+                                d1 = "Saturday";
+                            else if(da == 5)
+                                d1 = "Sunday";
+                            else if(da == 6)
+                                d1 = "Monday";
+                            else if(da == 7) {
+                                d1 = "Tuesday";
+                                da = 0;
                             }
+
                             ++da;
                             if( i == year && j == month && k == day ) {
                                 result.setText("Date : " + day + "/" + month + "/" + year + "\nDay: " + d1);
