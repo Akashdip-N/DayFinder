@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>  <!-- this is the background colour FF693F72-->
+    <color name="colorPrimary">#71B0BC</color>  <!-- this is the background colour FF693F72-->
     <color name="Input">#D9A1DC</color>
     <color name="Button">#8B0F5AD2</color>
     <color name="Output">#799595</color>
     <color name="text_colour">#0E0101</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="copyright">#F00F56</color>
+    <color name="copyright">#B471D0</color>
     <color name="dissatisfied">#B31116</color>
     <color name="sad">#BD2C76</color>
     <color name="neutral">#9D8D1C</color>

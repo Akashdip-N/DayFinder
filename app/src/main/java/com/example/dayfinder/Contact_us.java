@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Contact_us extends AppCompatActivity {
 
-    ImageButton facebook,twitter,ig, linkedin;
+    ImageButton twitter,ig, linkedin;
+    // ImageButton facebook;
     TextView name;
     ImageButton mail;
 
@@ -20,10 +21,13 @@ public class Contact_us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
         items();
+        /*
         facebook.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Akashdip.N"));
             startActivity(intent);
         });
+
+         */
 
         twitter.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://x.com/akashdip_neogi"));
@@ -50,7 +54,7 @@ public class Contact_us extends AppCompatActivity {
 
     public void items(){
         name = findViewById(R.id.Name);
-        facebook = findViewById(R.id.facebook);
+        //facebook = findViewById(R.id.facebook);
         twitter = findViewById(R.id.twitter);
         ig = findViewById(R.id.ig);
         mail = findViewById(R.id.mail);

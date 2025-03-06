@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Day Finder</string>
     <string name="text">result</string>
-    <string name="date">Please enter the date: </string>
-    <string name="submit">Submit</string>
+    <string name="date">Enter Date: </string>
+    <string name="submit">SUBMIT</string>
     <string name="copyright"> © AKASHDIP NEOGI </string>
     <string name="instructions">Please enter the year between the year limit of (1800 to 3000) and in (DD/MM/YYYY) format or in DDMMYYYY format. </string>
     <string name="rate">WANT TO RATE THIS APP?</string>
     <string name="tryagain">WANT TO TRY THIS APP AGAIN?</string>
     <string name="name">Akashdip Neogi</string>
-    <string name="contact">Socials</string>
+    <string name="contact">CONNECT WITH US</string>
     <string name="contact_us">CONTACT US</string>
-    <string name="mail">Drop us a mail</string>
+    <string name="mail">Want to drop us a mail?</string>
     <string name="rate_rate">PLEASE RATE US ACCORDING TO THE APP USING EXPERIENCE</string>
     <string name="thanks">THANKS FOR YOUR VALUABLE FEEDBACK :)</string>
     <string name="walla">WOW AMAZING YOU GOT THE EASTER EGG FOR THIS APP :) </string>

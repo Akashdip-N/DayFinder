@@ -16,6 +16,7 @@
         android:layout_marginLeft="20sp"
         android:layout_marginTop="50sp"
         android:layout_marginRight="20sp"
+        android:fontFamily="times"
         android:text="@string/rate_rate"
         android:textSize="30sp" />
 
@@ -81,6 +82,7 @@
         android:paddingTop="0dp"
         android:paddingRight="20dp"
         android:text="@string/thanks"
+        android:fontFamily="times"
         android:textSize="36sp" />
 
     <TextView

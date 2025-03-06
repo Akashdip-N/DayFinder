@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:fontFamily="casual"
+        android:fontFamily="times"
         android:text="@string/instructions"
         android:textColor="@color/text_colour"
         android:textSize="20sp" />
@@ -25,9 +25,9 @@
         android:id="@+id/Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Input"
+        android:background="@drawable/edittext_rounded"
         android:ems="10"
-        android:fontFamily="casual"
+        android:fontFamily="times"
         android:hint="@string/date"
         android:importantForAutofill="no"
         android:inputType="date"
@@ -40,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/Button"
-        android:fontFamily="casual"
+        android:background="@drawable/button_round"
+        android:fontFamily="times"
         android:hint="@string/submit"
         android:textColorHint="@color/text_colour"
         android:textSize="20sp" />
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@color/Output"
-        android:fontFamily="casual"
+        android:fontFamily="times"
         android:textColor="@color/text_colour"
         android:textSize="30sp" />
 
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
-
+        android:fontFamily="times"
         android:text="@string/tryagain"
         android:textSize="20sp" />
 
@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
-
+        android:fontFamily="times"
         android:text="@string/rate"
         android:textSize="24sp" />
 
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
-
+        android:fontFamily="times"
         android:text="@string/contact_us"
         android:textSize="30sp" />
 
