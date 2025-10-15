@@ -21,6 +21,7 @@ public class Contact_us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
         items();
+
         /*
         facebook.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Akashdip.N"));
@@ -29,10 +30,12 @@ public class Contact_us extends AppCompatActivity {
 
          */
 
+        /*
         twitter.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://x.com/akashdip_neogi"));
             startActivity(intent);
         });
+        */
 
        ig.setOnClickListener(v -> {
            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/akashdip_neogi/"));
@@ -55,7 +58,7 @@ public class Contact_us extends AppCompatActivity {
     public void items(){
         name = findViewById(R.id.Name);
         //facebook = findViewById(R.id.facebook);
-        twitter = findViewById(R.id.twitter);
+        //twitter = findViewById(R.id.twitter);
         ig = findViewById(R.id.ig);
         mail = findViewById(R.id.mail);
         linkedin = findViewById(R.id.linkedin);
